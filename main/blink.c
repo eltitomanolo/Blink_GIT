@@ -17,6 +17,8 @@
 */
 #define BLINK_GPIO CONFIG_BLINK_GPIO
 
+#define TIEMPO_ON_OFF 1000
+
 void app_main(void)
 {
     /* Configure the IOMUX register for pad BLINK_GPIO (some pads are
@@ -32,10 +34,10 @@ void app_main(void)
         /* Blink off (output low) */
 	printf("Turning off the LED\n");
         gpio_set_level(BLINK_GPIO, 0);
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        vTaskDelay(TIEMPO_ON_OFF / portTICK_PERIOD_MS);
         /* Blink on (output high) */
 	printf("Turning on the LED\n");
         gpio_set_level(BLINK_GPIO, 1);
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        vTaskDelay(TIEMPO_ON_OFF / portTICK_PERIOD_MS);
     }
 }
