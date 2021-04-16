@@ -16,8 +16,8 @@
    or you can edit the following line and set a number here.
 */
 #define BLINK_GPIO CONFIG_BLINK_GPIO
-#define TIEMPO_ON 	100
-#define TIEMPO_OFF 	500
+#define TIEMPO_ON 	20
+#define TIEMPO_OFF 	1000
 
 void app_main(void)
 {
