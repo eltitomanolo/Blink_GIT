@@ -17,7 +17,7 @@
 */
 #define BLINK_GPIO CONFIG_BLINK_GPIO
 
-#define TIEMPO_ON_OFF 1000
+#define TIEMPO_ON_OFF 200
 
 void app_main(void)
 {
